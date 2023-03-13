@@ -15,12 +15,19 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Määritä MEDIA_ROOT. Se on tiedostopolku kansioon, jonka alle
+# tallennetaan ladatut tiedostot.
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# Määritä MEDIA_URL. Se kertoo mitä lisätään ladattujen tiedostojen
+# osoitteiden (URL) alkuun.
+MEDIA_URL = "/media/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-xl00==j-0&9bpvp2_z5j5o6$25x+-1o&l%mm+391xc8k53j=9o'
+SECRET_KEY = 'django-insecure-vj+3uk4g3r#p%ljk8gvv4^3^j_&@zeqp3i#%5w!qheci8k8pk4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blogi',
 ]
 
 MIDDLEWARE = [
@@ -105,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Helsinki'
 
 USE_I18N = True
 
